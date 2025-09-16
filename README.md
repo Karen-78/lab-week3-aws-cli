@@ -8,5 +8,4 @@
 ### For "create-ec2"
 - https://docs.aws.amazon.com/cli/latest/reference/ec2/run-instances.html
 - https://docs.aws.amazon.com/cli/latest/reference/gamelift/describe-instances.html#describe-instances
-### For "create-vpc"
-- 
+

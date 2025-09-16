@@ -30,11 +30,13 @@ aws ec2 authorize-security-group-ingress --group-id $security_group_id \
 # COMPLETE THIS PART
 instance_id=$(aws ec2 run-instances \
   --image-id $debian_ami \
-  --instance-type t2.micro \
+  --instance-type t3.micro \
   --key-name $key_name \
+  --subnet-id $subnet_id \
   --security-group-ids $security_group_id \
+  --query 'Instances[0].InstanceId' \
   --region $region \
-   --output text
+  --output text
 )
 
 # wait for ec2 instance to be running
